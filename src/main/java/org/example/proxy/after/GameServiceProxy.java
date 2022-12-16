@@ -4,13 +4,15 @@ package org.example.proxy.after;
 public class GameServiceProxy implements GameService {
 
     // 인터페이스까지 반영해서 프록시 패턴적 => 코드가 복잡
+    // 기존 코드를 재사용하기 위해서
     private GameService gameService;
 
+    // lazy initialization 없을 때 사용
 //    public GameServiceProxy(GameService gameService) {
 //        this.gameService = gameService;
 //    }
 
-    // OCP
+    // 개방 폐쇄 원칙(OCP) 지키고 있다.
     // 지연시켜서 사용하고 있다.
     @Override
     public void startGame() {
