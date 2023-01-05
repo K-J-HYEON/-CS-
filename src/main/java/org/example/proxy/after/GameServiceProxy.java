@@ -7,6 +7,7 @@ public class GameServiceProxy implements GameService {
     // 기존 코드를 재사용하기 위해서
     private GameService gameService;
 
+
     // lazy initialization 없을 때 사용
 //    public GameServiceProxy(GameService gameService) {
 //        this.gameService = gameService;
