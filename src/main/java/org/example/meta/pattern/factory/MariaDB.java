@@ -6,8 +6,10 @@ public class MariaDB implements DB {
 
     // 쿼리 실행 메서드
     public int execute(String sql) {
+
         if (url == null) {
             throw new NullPointerException("db driver not found exception");
+
         }
 
         if (sql.equals("select")) {
